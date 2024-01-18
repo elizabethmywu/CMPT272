@@ -1,0 +1,158 @@
+/*
+<!-- Elizabeth Wu 301459411 -->
+<!-- CMPT 272 Assignment 1 -->
+*/
+
+/* SAME ON ALL PAGES: HEADER, LINKS*/
+body {
+    font-family: sans-serif;
+    background-color: #EDEFF1;
+}
+
+header { 
+    background-color: #37474F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 1em 1.25em 0.25em 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.page-name { /*changes font-size when window size changes (see FACULTY PAGES section: media queries)*/
+    color: white;
+}
+
+em.orange-text {
+    font-style: normal;
+    color: coral;
+}
+
+.menu-bars {
+    width: 25px;
+    height: 25px;
+}
+
+a {
+    color: darkred;
+    text-decoration-line: none;
+}
+
+
+/* HOME PAGE */
+.main-page-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.page-info, .main-menu {
+    flex: 1;
+}
+
+.main-menu > menu {
+    margin-top: 1.5em;
+}
+
+@media only screen and (max-width:550px) {
+    .main-page-flex {
+        flex-direction: column;
+    }
+}
+
+.page-info p {
+    padding-left: 1.5em;
+    margin: 1.75em 0em;
+}
+
+.extra-faculty-info {
+    list-style-type: none;
+    display: none;
+    padding-left: 1.5em;
+}
+
+.extra-faculty-info > p {
+    padding-left: 1.5em;
+    margin-top: 1.75em;
+}
+
+
+li:hover + .extra-faculty-info {
+    display: block;
+}
+
+
+
+/* FACULTY PAGES */
+.book-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.75em;
+    justify-content: space-around;
+}
+
+.book-entry {
+    flex: 20%;
+    background-color: white;
+}
+
+@media only screen and (min-width:481px) and (max-width:770px) {
+    .book-entry {
+        flex: 45%;
+    }
+    /* FOR HEADER !*/
+    .page-name { 
+        font-size: 1.5em;   /*  default is 2em */
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .book-entry {
+        flex: 100%;
+    }
+    /* FOR HEADER !*/
+    .page-name { 
+        font-size: 1em;   /*  default is 2em */
+    }
+}
+
+.book-entry > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.book-description {
+    padding: 0.25em 1.25em 0em 1.25em;
+}
+
+.fade-in {
+    color: white;
+    background-color: tomato;
+    padding: 0.5em 1em;
+    margin: 0.5em 0em;
+    border: none;
+    border-radius: 0.25em;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.book-entry:hover .fade-in {
+    opacity: 1.0;
+}
+
+.book-entry:hover {
+    box-shadow: 0.25em 0.25em 0.5em silver;
+}
+
+.back-home {
+    margin: 3em 0em;
+}
+
+
+
+
+
