@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPT272 A2: Histogram Generator</title>
+    <link rel="stylesheet" href="./css/histogram.css">
+    <script type="text/javascript" src="js/histogram.js" defer></script>
+</head>
+
+<body class="page-background" onload="init()">
+    <div class="main-content">
+        <header class="header">
+            <h1 class="header-text">Histogram Generator</h1>
+        </header>
+        <main>
+            <section class="upload-file" >
+                <p class="center-text">Choose a .csv grade file, set the lower bounds, and see the data represented in a histogram!</p>
+                <p class="center-text"><input type="file" id="file-input" accept=".csv"></p>
+            </section>
+            <div class="flex">
+                <section class="bounds">
+                    <h2 class="header-text">Lower Bounds</h2>
+                    <div class="grid">
+                        <label for="max-bound">Max</label> 
+                        <input id="max-bound" type="number" value="100.00" onchange="updatePage()">
+
+                        <label for="a+-bound">A+</label>
+                        <input id="a+-bound" type="number" value="95.00" onchange="updatePage()">
+
+                        <label for="a-bound">A</label>
+                        <input id="a-bound" type="number" value="90.00" onchange="updatePage()">
+
+                        <label for="a--bound">A-</label>
+                        <input id="a--bound" type="number" value="85.00" onchange="updatePage()">
+
+                        <label for="b+-bound">B+</label>
+                        <input id="b+-bound" type="number" value="80.00" onchange="updatePage()">
+
+                        <label for="b-bound">B</label>
+                        <input id="b-bound" type="number" value="75.00" onchange="updatePage()">
+
+                        <label for="b--bound">B-</label>
+                        <input id="b--bound" type="number" value="70.00" onchange="updatePage()">
+
+                        <label for="c+-bound">C+</label>
+                        <input id="c+-bound" type="number" value="65.00" onchange="updatePage()">
+
+                        <label for="c-bound">C</label>
+                        <input id="c-bound" type="number" value="60.00" onchange="updatePage()">
+
+                        <label for="c--bound">C-</label>
+                        <input id="c--bound" type="number" value="55.00" onchange="updatePage()">
+
+                        <label for="d-bound">D</label>
+                        <input id="d-bound" type="number" value="50.00" onchange="updatePage()">
+
+                        <label for="f-bound">F</label>
+                        <input id="f-bound" type="number" value="0.00" onchange="updatePage()">
+                    </div>
+                </section>
+                <div class="col-flex">
+                    <section class="graph">
+                        <h2 class="header-text">Histogram</h2>
+                        <div class="grid">
+                            <label for="a+-graph">A+</label>
+                            <output id="a+-graph"></output>
+
+                            <label for="a-graph">A</label>
+                            <output id="a-graph"></output>
+
+                            <label for="a--graph">A-</label>
+                            <output id="a--graph"></output>
+
+                            <label for="b+-graph">B+</label>
+                            <output id="b+-graph"></output>
+
+                            <label for="b-graph">B</label>
+                            <output id="b-graph"></output>
+
+                            <label for="b--graph">B-</label>
+                            <output id="b--graph"></output>
+
+                            <label for="c+-graph">C+</label>
+                            <output id="c+-graph"></output>
+
+                            <label for="c-graph">C</label>
+                            <output id="c-graph"></output>
+
+                            <label for="c--graph">C-</label>
+                            <output id="c--graph"></output>
+
+                            <label for="d-graph">D</label>
+                            <output id="d-graph"></output>
+
+                            <label for="f-graph">F</label>
+                            <output id="f-graph"></output> 
+                        </div>
+                    </section>
+                    <section class="stats">
+                        <h2 class="header-text">Stats</h2>
+                        <div class="grid">
+                            <label for="highest">Highest</label>
+                            <output id="highest">---</output>
+
+                            <label for="lowest">Lowest</label>
+                            <output id="lowest">---</output>
+
+                            <label for="mean">Mean</label>
+                            <output id="mean">---</output>
+
+                            <label for="median">Median</label>
+                            <output id="median">---</output>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+
+</html>

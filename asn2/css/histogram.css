@@ -1,0 +1,65 @@
+.page-background {
+    background-color: rgba(166, 25, 46, 1.0)
+    
+}
+
+.main-content {
+    background-color: white;
+    margin: 0rem 2rem;
+    padding: 1rem;
+}
+
+.center-text{
+    text-align: center;
+}
+
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.bounds {
+    flex: 1;
+}
+
+.col-flex {
+    flex: 3;
+    display: flex;
+    flex-flow: column wrap;
+}
+.graph {
+    flex: 2;
+
+}
+
+.stats {
+    flex: 1;
+}
+
+section {
+    background-color: rgba(84, 88, 90, 0.05);
+    margin: 0.25rem;
+    padding: 0.5rem 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 0.5rem 0rem;
+    align-items: center;
+    justify-self: center;
+    margin: 0.5rem 1rem;
+}
+
+input[type=number] {
+    font-family: serif;
+    font-size: 1em;
+    padding: 0.5rem;
+    width: 75%;
+}
+
+.header-text {
+    font-family: sans-serif;
+    text-align: center;
+}
