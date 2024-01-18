@@ -1,0 +1,74 @@
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.col-flex {
+    flex: 1.5;
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.35em;
+    
+}
+
+table {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-list > td {
+    width: 25%;
+}
+
+#main-list {
+    background-color: lavenderblush;
+    padding: 1.5rem;
+    flex: 3;
+}
+
+#add-pig {
+    margin: 1em;
+}
+
+#more-info {
+    background-color: lavender;
+    padding: 1.5rem;
+}
+
+#add-new {
+    background-color: thistle;
+    padding: 0.5rem;
+}
+
+#more-info, #add-new {
+    visibility: hidden;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    gap: 0.5rem 0rem;
+    align-items: center;
+    justify-self: center;
+    margin: 0.5rem 1rem;
+}
+
+input, select, datalist {
+    padding: 0.25rem;
+}
+
+#save-new {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

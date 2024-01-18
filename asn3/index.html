@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CMPT 272 A3</title>
+
+        <link rel="stylesheet" href="./css/style.css">
+        
+    </head>
+    <body>
+        <header></header>
+        <main class="flex">
+            <section id="main-list" class="center-text">
+                <h1>List of Pigs</h1>
+                <p>Click on a table header to sort its column</p>
+                <table class="sortable">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th> <!-- more info-->
+                            <th scope="col">Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col"></th> <!--delete-->
+                        </tr>
+                    </thead>
+                    <tbody id="all-pigs">
+                    </tbody>
+                </table>
+
+                <button id="add-pig">Add New</button> <!-- make section visible-->
+            </section>
+            <div class="col-flex">
+                <section id="more-info" class="center-text">
+                    <h3>More Info</h3>
+                    <table>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td id="show-name"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Height</th>
+                            <td id="show-height"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Weight</th>
+                            <td id="show-weight"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Personality</th>
+                            <td id="show-personality"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Category</th>
+                            <td id="show-category"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Breed</th>
+                            <td id="show-breed"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="show-ability-name">Strength</th>
+                            <td id="show-ability-detail"></td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="add-new">
+                    <h3 class="center-text">Add New</h3>
+                    <div class="grid">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+
+                        <label for="height">Height (m):</label>
+                        <input type="number" id="height" name="height" min="0" max="100" value="0" required>
+
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" min="0" max="100" value="0" required>
+
+                        <label for="personality">Personality:</label>
+                        <input type="text" id="personality" name="personality" required>
+
+                        <label for="category">Category:</label>
+                        <select name="category" id="category">
+                            <option value="Grey" selected>Grey</option>
+                            <option value="Chestnut">Chestnut</option>
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                        </select> <!-- update breed and ability-->
+                        
+                        <label for="breed">Breed:</label>
+                        <input list="breeds" id="breed" name="breed" required>
+                        <datalist id="breeds">
+                        </datalist>
+
+                        <label for="ability">Swimming (0-100):</label> <!-- default is grey-->
+                        <input type="number" id="ability" name="ability" min="0" max="100" value="0" required>
+   
+                    </div>
+                    <button id="save-new" class="center-text">Save</button>
+                </section>
+            </div>
+        </main>
+        <!-- <script src="./ts/main.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system-csp-production.js" integrity="sha512-a9MEwZ/fjbukKadVs1ll0UUQj6eDrbIOosbrVlXtB0Xsyp8CS8WfltP03UxVzVmpYw+QhX1SphHlePMTVNVlPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script type="text/javascript">
+            System.defaultJSExtensions = true
+            System.import('./ts/main')
+        </script>
+    </body>
+</html>
